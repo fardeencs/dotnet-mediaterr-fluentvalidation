@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71FD75B4-861F-43F1-9FB4-FD7C1F633B0A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebClient</RootNamespace>
+    <AssemblyName>WebClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\libs\bootstrap\assets\fonts\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\libs\bootstrap\assets\javascripts\bootstrap-sprockets.js" />
+    <Content Include="assets\libs\bootstrap\assets\javascripts\bootstrap.js" />
+    <Content Include="assets\libs\bootstrap\assets\javascripts\bootstrap.min.js" />
+    <Content Include="assets\libs\bootstrap\assets\javascripts\bootstrap\affix.js" />
+    <Content Include="assets\libs\bootstrap\assets\javascripts\bootstrap\alert.js" />
+    <Content Include="assets\libs\bootstrap\assets\javascripts\bootstrap\button.js" />
+    <Content Include="assets\libs\bootstrap\assets\javascripts\bootstrap\carousel.js" />
+    <Content Include="assets\libs\bootstrap\assets\javascripts\bootstrap\collapse.js" />
+    <Content Include="assets\libs\bootstrap\assets\javascripts\bootstrap\dropdown.js" />
+    <Content Include="assets\libs\bootstrap\assets\javascripts\bootstrap\modal.js" />
+    <Content Include="assets\libs\bootstrap\assets\javascripts\bootstrap\popover.js" />
+    <Content Include="assets\libs\bootstrap\assets\javascripts\bootstrap\scrollspy.js" />
+    <Content Include="assets\libs\bootstrap\assets\javascripts\bootstrap\tab.js" />
+    <Content Include="assets\libs\bootstrap\assets\javascripts\bootstrap\tooltip.js" />
+    <Content Include="assets\libs\bootstrap\assets\javascripts\bootstrap\transition.js" />
+    <Content Include="assets\libs\jquery\dist\jquery.min.js" />
+    <Content Include="assets\libs\jquery\dist\jquery.slim.min.js" />
+    <Content Include="assets\scripts\jquery-1.10.2.min.js" />
+    <Content Include="gulpfile.js" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include=".bowerrc" />
+    <Content Include="bower.json" />
+    <Content Include="package.json" />
+    <Content Include="assets\styles\scss\mixins\variables.scss" />
+    <Content Include="assets\styles\scss\style.scss" />
+    <Content Include="assets\libs\bootstrap\assets\fonts\bootstrap\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\libs\bootstrap\assets\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\libs\bootstrap\assets\fonts\bootstrap\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\libs\bootstrap\assets\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_alerts.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_buttons.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_center-block.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_forms.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_gradients.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_grid.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_hide-text.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_image.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_labels.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_list-group.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_nav-vertical-align.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_opacity.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_pagination.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_panels.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_progress-bar.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_reset-filter.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_resize.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_responsive-visibility.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_size.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_tab-focus.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_table-row.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_text-overflow.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\mixins\_vendor-prefixes.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_alerts.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_badges.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_breadcrumbs.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_button-groups.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_buttons.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_carousel.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_close.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_code.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_component-animations.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_dropdowns.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_forms.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_glyphicons.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_grid.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_input-groups.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_jumbotron.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_labels.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_list-group.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_media.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_mixins.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_modals.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_navbar.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_navs.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_normalize.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_pager.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_pagination.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_panels.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_popovers.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_print.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_progress-bars.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_responsive-embed.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_responsive-utilities.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_scaffolding.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_tables.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_theme.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_thumbnails.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_tooltip.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_type.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_utilities.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_variables.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\bootstrap\_wells.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\_bootstrap-compass.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\_bootstrap-mincer.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\_bootstrap-sprockets.scss" />
+    <Content Include="assets\libs\bootstrap\assets\stylesheets\_bootstrap.scss" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="scripts\ai.0.15.0-build58334.js" />
+    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="testClient.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\docs\" />
+    <Folder Include="assets\images\" />
+    <Folder Include="assets\media\" />
+    <Folder Include="assets\styles\styles\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3588</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1898/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,19 @@
+{
+	"name": "WebClient",
+	"private": true,
+	"dependencies": {
+		"bootstrap-sass": "^3.3.5",
+		"jquery-validate": "^1.14.0",
+		"modernizr": "^3.0.0",
+		"enquire": "^2.1.2",
+		"respond": "^1.4.2",
+		"html5shiv": "^3.7.3",
+		"less": "^2.5.2",
+		"awesome-bootstrap-checkbox": "^0.3.5",
+		"eonasdan-bootstrap-datetimepicker": "^4.17.37",
+		"fontawesome": "^4.4.0",
+		"moment": "^2.10.6",
+		"bootstrap-toggle": "^2.2.1",
+		"jquery-ui": "^1.11.4"
+	}
+}

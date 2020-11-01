@@ -1,0 +1,58 @@
+﻿
+//select flight Request you can get the session id nad fare source code from the below URL
+
+{
+  "CommonRequestFarePricer": {
+    "Body": {
+      "AirRevalidate": {
+        "ARAgencyCode": "",
+        "ARSupplierCode": "",
+        "FareSourceCode": "MjAwMDAxJkkxSkQmMUImNTdjYWY0YTktZjAwOC00MjVjLWIyNWQtM2RkZGU4Mjc2M2Q2JkkxSkQm",
+        "SessionId": "7486f76e-f1b4-4a9d-b313-e5a5fad532c1",
+        "Target": "Production",
+        "ADT": 1,
+        "CHD": 1,
+        "INF": 1,
+        "segmentGroup": [
+          {
+            "segmentInformation": {
+              "flightDate": {
+                "departureDate": "101217",
+                "departureTime": "1335",
+                "arrivalDate": "221117",
+                "arrivalTime": "1900"
+              },
+              "boardPointDetails": {
+                "trueLocationId": "DXB"
+              },
+              "offpointDetails": {
+                "trueLocationId": "COK"
+              },
+              "companyDetails": {
+                "marketingCompany": "AI",
+                "operatingCompany": "AI"
+              },
+              "flightIdentification": {
+                "flightNumber": "934",
+                "bookingClass": "M"
+              },
+              "flightTypeDetails": {
+                "flightIndicator": "1",
+                "itemNumber": 1
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+
+
+-------------------------------------------------------------------
+
+
+http://mistyflyapi.oneviewitsolutions.com/mystifly-partner/search-flight
+
+
+{ "CommonRequestSearch": { "AgencyCode": "ONVAIR001", "NumberOfUnits": 1, "TypeOfUnit": "PX" }, "SupplierAgencyDetails": [ { "SupplierId": 1, "BaseUrl": "http://mistyflyapi.oneviewitsolutions.com", "RequestUrl": null, "AgencyID": 32, "SupplierName": "Mistyfly", "SupplierCode": "MIS001", "AccountNumber": "MCN001438", "UserName": "ONEV_XML", "Password": "ONEV2017_xml", "Status": "T" } ], "OriginDestinationInformation": [ { "DepartureDate": "28-11-2017", "OriginLocation": "DXB", "DestinationLocation": "COK", "RadiusInformation": { "_FromValue": "0", "_ToValue": "250" } } ], "Currency": "AED", "PreferredAirline": "EY", "NonStop": "True", "cabin": "Y", "IsRefundable": "true", "Maxstopquantity": "All", "Triptype": "O", "PreferenceLevel": "Preferred", "Target": "Test", "PassengerTypeQuantity": { "ADT": 1, "CHD": 0, "INF": 0 } }

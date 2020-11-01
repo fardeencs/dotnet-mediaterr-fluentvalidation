@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="assets/scripts/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+
+    <h1>Hello world...!</h1>
+    <div id="divTest"></div>
+    <script type="text/javascript">
+
+        var printError = function (req, status, err) {
+            console.log('something went wrong', status, err);
+        };
+
+
+        function sendAjaxCall() {
+            var model = {};
+            model.Page = 1;
+            model.PageSize = 2;
+            $.ajax(
+                  {
+                      type: "GET",
+                      url: 'http://localhost:2238//api/mediation/book/flights',
+                      data: {},
+                      contentType: "application/json; charset=utf-8",
+                      dataType: 'json',
+                      success: function (response) {
+                          $('#divTest').append(JSON.stringify(response));
+                      },
+                      error: printError
+                  });
+        }
+
+        sendAjaxCall();
+    </script>
+</body>
+</html>

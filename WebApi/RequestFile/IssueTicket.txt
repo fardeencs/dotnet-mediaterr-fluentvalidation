@@ -1,0 +1,32 @@
+﻿{
+  "ticketCreateTSTFromPricing": {
+
+   "AgencyCode": "ONVAIR001",
+	  "SupplierCode": "MISWEB",
+
+    "FareSourceCode": "MjYwMDAwMSZJMUpEJjFCJjE4OWNhNDY3LTQ5NGQtNDA5Ny1hNmY5LTIzNzM0ZDU4ZWU1ZiZJMUpEJg",
+    "SessionId": "9975c32c-af7e-4451-a99b-690bb3c38227",
+    "Target": "Production",
+    "UniqueID": "MF02720017"
+  },
+  "psaList": [
+    {
+      "itemReference": {
+        "referenceType": "TST",
+        "uniqueReference": "1"
+      }
+    },
+    {
+      "itemReference": {
+        "referenceType": "TST",
+        "uniqueReference": "2"
+      }
+    },
+    {
+      "itemReference": {
+        "referenceType": "TST",
+        "uniqueReference": "3"
+      }
+    }
+  ]
+}
